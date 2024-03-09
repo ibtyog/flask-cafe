@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+
+
+<div class="container-fluid">
+    <div class="row">
+        {% for cafe in cafes: %}
+        <div class="col col-sm-12 col-md-2 col-lg-4 card-col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{cafe.img_link}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{cafe.name}}</h5>
+                  <p class="card-text">{{cafe.address}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{cafe.description}}</li>
+                  <li class="list-group-item">Coffee: {%for i in range(0,(cafe.coffee_rating)//2):%}★{%endfor%}{%if cafe.coffee_rating % 2 == 1: %}☆{%endif%}</li>
+                  <li class="list-group-item">Wifi: {%for i in range(0,(cafe.wifi_rating)//2):%}★{%endfor%}{%if cafe.wifi_rating % 2 == 1: %}☆{%endif%}</li>
+                </ul>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

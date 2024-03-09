@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col-lg-12">
+            Add cafe!
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-lg-12">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Cafe name" required="required">
+                <input type="text" name="description" placeholder="description">
+                <input type="text" name="address" placeholder="Location" required="required">
+                <input type="text" name="img_link" placeholder="Image URL">
+                <input type="number" name="coffee_rating" placeholder="Coffee rating">
+                <input type="number" name="wifi_rating" placeholder="Wifi rating" required='required'>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

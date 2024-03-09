@@ -1,0 +1,7 @@
+/* class */
+.card-col {
+    display: flex;
+    padding: 2%;
+    justify-content: center;
+    text-align: center;
+}
